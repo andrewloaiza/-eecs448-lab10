@@ -33,6 +33,7 @@ if (!mysqli_select_db($dbc, $db))
 /* query and display all users */
 $users = "SELECT user_id FROM Users";
 
+// check if query failed
 if (!$dbc->query($users))
 {
   echo "<h1>Error loading data</h1>
@@ -45,9 +46,10 @@ if (!$dbc->query($users))
   die();
 }
 
-
+// save query result in variable
 if ($result = $dbc->query($users))
 {
+  // if table is non-empty
   if (mysqli_num_rows($result) > 0)
   {
     echo "<h1>List of all users in Users Table</h1>";
@@ -73,11 +75,6 @@ if ($result = $dbc->query($users))
           <a href='../../index.html'>Main Menu</a>";
     die();
   }
-}
-
-else
-{
-  echo "Error: something here";
 }
 
 ?>
