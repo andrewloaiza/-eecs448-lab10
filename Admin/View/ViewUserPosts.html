@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Post History</title>
+  </head>
+  <body>
+
+    <h1>Post History</h1>
+
+    <p>Choose the user whose post you'd like to view.</p>
+
+    <form class="postsHistory" action="ViewUserPosts.php" method="post">
+
+      <?php
+        include("usersDropdown.php");
+      ?>
+
+
+      <label for="users">Select a user:</label>
+      <select class="users" id="users" name="users">
+
+        <option value=""></option>
+        <option value=""></option>
+
+      </select>
+
+    </form>
+
+  </body>
+</html>

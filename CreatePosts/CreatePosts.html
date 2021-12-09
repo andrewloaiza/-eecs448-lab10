@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>New Post</title>
+  </head>
+  <body>
+
+    <h1>Create Post</h1>
+
+    <p>Feel free to share what's on your mind.</p>
+
+    <form class="post" action="CreatePosts.php" method="post">
+      <label for="username">Username: </label><br>
+      <input type="text" id="username" name="username" value="" required><br><br>
+
+      <label for="post">Post: </label><br>
+      <textarea id="post" name="post" rows="8" cols="80" required></textarea><br><br>
+
+      <input type="submit" name="submit" value="Post">
+    </form>
+
+  </body>
+</html>
